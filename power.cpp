@@ -15,7 +15,7 @@ int main()
 int power(int x, unsigned p) {
     int answer = 1;
     /* считаем answer */
-	for (unsigned i = 1; i <= p; i++) {
+	for (unsigned i = 1; i <= p; ++i) {
 		answer *= x;
 	}
     return answer;
