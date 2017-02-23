@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+void strcat(char *to, const char *from)
+{
+    char * t = to;
+	while (*t != '\0')
+		++t;
+	while (*from != '\0') {
+		*t++ = *from++;
+	}
+	*t = '\0';	
+}
+
+int main()
+{
+	char dest[33] = "Hello";
+	const char * sour = " and Good Bye";
+	strcat(dest, sour);
+	cout << dest << endl;
+	return 0;
+}
