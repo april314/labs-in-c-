@@ -4,17 +4,8 @@
 
 struct Rational
 {
-    Rational(int numerator = 0, int denominator = 1);
-
-    void add(Rational rational);
-    void sub(Rational rational);
-    void mul(Rational rational);
-    void div(Rational rational);
-
-    void neg();
-    void inv();
-    double to_double() const;
-    
+    	Rational(int numerator = 0, int denominator = 1);
+	
     	Rational& operator+=(Rational const &r) {
 		numerator_ = (numerator_ * r.denominator_) + (r.numerator_ * denominator_);
 		denominator_ = denominator_ * r.denominator_;
