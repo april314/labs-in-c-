@@ -68,3 +68,32 @@ private:
     {
         return r1 /= r2;
     }
+bool operator==(Rational const & lhs, Rational const & rhs)
+{
+    return (lhs.get_num()*rhs.get_den()) == (rhs.get_nom()*lhs.get_den());
+}
+
+bool operator!=(Rational const & lhs, Rational const & rhs)
+{
+    return !(lhs==rhs);
+}
+
+bool operator<(Rational const & lhs, Rational const & rhs)
+{
+    return lhs.get_num()*rhs.get_den() < rhs.get_num()*lhs.get_den();
+}
+
+bool operator>(Rational const & lhs, Rational const & rhs)
+{
+    return rhs < lhs;
+}
+
+bool operator>=(Rational const & lhs, Rational const & rhs)
+{
+    return !(lhs < rhs);
+}
+
+bool operator<=(Rational const & lhs, Rational const & rhs)
+{
+    return !(rhs < lhs);
+}
