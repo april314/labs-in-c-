@@ -48,3 +48,23 @@ private:
     int numerator_;
     int denominator_;
 };
+
+    Rational operator+(Rational r1, Rational const & r2)
+    {
+        return r1 += r2;
+    }
+
+    Rational operator-(Rational r1, Rational const & r2)
+    {
+        return r1 -= r2;
+    }
+
+    Rational operator*(Rational r1, Rational const & r2)
+    {
+        return r1 *= r2;
+    }
+
+    Rational operator/(Rational r1, Rational const & r2)
+    {
+        return r1 /= r2;
+    }
